@@ -1,5 +1,6 @@
 # so_long
-So long, Marianne, it's time we began to laugh and cry and cry and laugh about it all again
+I'm just a sleepy girl that needs coffee to start working
+
 <h3>Want to play the game?</h3>
 
 ```

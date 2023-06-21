@@ -1,5 +1,13 @@
 # so_long
 So long, Marianne, it's time we began to laugh and cry and cry and laugh about it all again
+<h3>Want to play the game?</h3>
+1. Copy the repository
+2. Build the game using Make re
+3. Launch the game by executing the game. The second argument shall be the map you want to play
+	For example ./so_long map/01.ber
+- make re
+4. Enjoy moving "elili" around the map and collecting coffees until reaching the bathroom
+
 	<h3 style="text-align: center;">Project Tree</h3>
 ```
 

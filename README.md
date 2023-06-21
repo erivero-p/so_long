@@ -8,7 +8,7 @@ So long, Marianne, it's time we began to laugh and cry and cry and laugh about i
 - make re
 4. Enjoy moving "elili" around the map and collecting coffees until reaching the bathroom
 
-	<h3 style="text-align: center;">Project Tree</h3>
+<h3>Project Tree</h3>
 ```
 
 .

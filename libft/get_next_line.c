@@ -6,10 +6,9 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:32:22 by erivero-          #+#    #+#             */
-/*   Updated: 2023/06/12 11:52:29 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/06/21 13:38:38 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -119,22 +118,3 @@ char	*get_next_line(int fd)
 	st_acum = ft_acumclean(st_acum);
 	return (line);
 }
-
-/* int	main(void)
-{
-	int		fd;
-	char	*str;
-
-	fd = open("tv.txt", O_RDONLY);
-	str = get_next_line(fd);
-	printf("%s", str);
-	str = get_next_line(fd);
-	printf("%s", str);
-	str = get_next_line(fd);
-	printf("%s", str);
-
-
-	close(fd);
-	return (0);
-}
- */

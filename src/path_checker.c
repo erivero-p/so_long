@@ -6,7 +6,7 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 12:25:28 by erivero-          #+#    #+#             */
-/*   Updated: 2023/06/20 12:30:39 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/06/21 11:29:33 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,19 @@ static char	**map_copy(t_solong *info)
 	return (map_c);
 }
 
+void	free_map(t_solong	*info, char **map)
+{
+	int	i;
+
+	i = 0;
+	while (i < info->height)
+	{
+		free(map[i]);
+		i++;
+	}
+	free (map);
+}
+
 static int	path_counter(t_solong *info)
 {
 	char	**cpy;
@@ -79,6 +92,7 @@ static int	path_counter(t_solong *info)
 		}
 		y++;
 	}
+	free_map(info, cpy);
 	return (c);
 }
 

@@ -6,15 +6,13 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:35:52 by erivero-          #+#    #+#             */
-/*   Updated: 2023/06/20 12:54:49 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/06/21 13:28:31 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdbool.h>
 #include <stdio.h>
 #include "../include/solong.h"
-
-//pdte printear los tipos de errores :D
 
 void	ft_map_dim(t_solong *info)
 {

@@ -6,25 +6,21 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 14:56:58 by erivero-          #+#    #+#             */
-/*   Updated: 2023/06/12 16:25:04 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/06/21 13:27:38 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/solong.h"
-void	check_leakss(void)
-{
-	system("leaks -q so_long");
-}
 
 int	ft_close(t_solong *info)
 {
-	// hay que limpiar cosicas :D
+	free_map(info, info->map);
 	mlx_destroy_window(info->mlx_ptr, info->win_ptr);
 	mlx_clear_window(info->mlx_ptr, info->win_ptr);
-	atexit(check_leakss);
 	exit(EXIT_SUCCESS);
 }
-static int ft_hook(int keycode, t_solong *info)
+
+static int	ft_hook(int keycode, t_solong *info)
 {
 	if (keycode == ESC)
 		ft_close(info);

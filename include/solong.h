@@ -6,7 +6,7 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 11:59:36 by erivero-          #+#    #+#             */
-/*   Updated: 2023/06/20 12:12:00 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/06/21 13:26:15 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void	ft_go_down(t_solong *info);
 void	ft_go_up(t_solong *info);
 bool	content_checker(t_solong *info);
 bool	path_checker(t_solong *info);
+void	free_map(t_solong	*info, char **map);
 
 
 

@@ -6,7 +6,7 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 12:05:04 by erivero-          #+#    #+#             */
-/*   Updated: 2023/06/20 15:50:44 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/06/21 13:28:10 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int ac, char **av)
 		return (-1);
 	}
 	get_map(fd, &info);
-	if (!map_checker(&info)) //pdte liberar y cerrar con exit
+	if (!map_checker(&info))
 		return (-1);
 	info.movements = 0;
 	create_window(&info);

@@ -6,7 +6,7 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 13:46:29 by erivero-          #+#    #+#             */
-/*   Updated: 2023/06/20 13:31:58 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/06/21 11:12:07 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	create_window(t_solong *info)
 {
 	info->mlx_ptr = mlx_init();
 	info->win_ptr = mlx_new_window(info->mlx_ptr,
-			info->width * 64, info->height * 64, "elili needs a coffe or two");
+			info->width * 64, info->height * 64, "elili needs a coffee or two");
 	create_image(info);
 	put_images(info);
 }

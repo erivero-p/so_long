@@ -4,10 +4,9 @@ So long, Marianne, it's time we began to laugh and cry and cry and laugh about i
 
 ```
 1. Copy the repository
-2. Build the game using Make re
+2. Build the game using: make re
 3. Launch the game by executing the game. The second argument shall be the map you want to play
 	For example ./so_long map/01.ber
-- make re
 4. Enjoy moving "elili" around the map and collecting coffees until reaching the bathroom
 ```
 

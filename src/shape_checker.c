@@ -6,7 +6,7 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:35:52 by erivero-          #+#    #+#             */
-/*   Updated: 2023/06/21 13:28:31 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/06/21 13:47:48 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ bool	map_checker(t_solong *info)
 	ft_map_dim(info);
 	if (!wall_checker(info))
 		ft_printf("Error\nNo walls arround all map\n");
-	if (wall_checker(info) && shape_checker(info)
+	if (shape_checker(info) && wall_checker(info)
 		&& content_checker(info) && path_checker(info))
 		return (true);
 	return (false);

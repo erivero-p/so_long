@@ -19,7 +19,7 @@ I'm just a sleepy girl that needs coffee to start working
 ├── Makefile
 ├── include
 │   └── solong.h
-├── libft
+├── libft/
 ├── map
 │   ├── 01.ber
 │   ├── 02.ber
@@ -31,9 +31,8 @@ I'm just a sleepy girl that needs coffee to start working
 │       ├── no_path.ber
 │       ├── shape.ber
 │       └── walls.ber
-├── mlx
-├── objs
-├── so_long
+├── mlx/
+├── objs/
 ├── sprites
 │   ├── coffee.xpm
 │   ├── eli.xpm

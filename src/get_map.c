@@ -6,11 +6,32 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 12:37:43 by erivero-          #+#    #+#             */
-/*   Updated: 2023/06/21 12:54:15 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/07/26 15:32:38 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/solong.h"
+
+bool	check_spaces(char *str, t_solong *info)
+{
+	int	i;
+	int	len;
+
+	i = 0;
+	len = ft_strlen(str);
+	while (i < len)
+	{
+		if (i > 0 && str[i] == '\n' && str[i - 1] == '\n')
+		{
+			ft_printf("Error\nWrong map shape");
+			free(str);
+			return (false);
+		}
+		i++;
+	}
+	info->map = ft_split(str, '\n');
+	return (true);
+}
 
 void	get_map(int fd, t_solong *info)
 {
@@ -20,6 +41,8 @@ void	get_map(int fd, t_solong *info)
 	int		i;
 
 	line = get_next_line(fd);
+	if (!line)
+		exit(EXIT_FAILURE);
 	next_line = get_next_line(fd);
 	tmp = ft_strdup("");
 	i = 0;
@@ -34,6 +57,7 @@ void	get_map(int fd, t_solong *info)
 		line = tmp;
 		i++;
 	}
-	info->map = ft_split(line, '\n');
+	if (!check_spaces(line, info))
+		exit(EXIT_FAILURE);
 	free(line);
 }

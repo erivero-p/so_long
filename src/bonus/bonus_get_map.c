@@ -6,11 +6,11 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 12:37:43 by erivero-          #+#    #+#             */
-/*   Updated: 2023/08/01 11:08:52 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/08/01 11:08:33 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/solong.h"
+#include "../../include/solong.h"
 
 static bool	check_spaces(char *str, t_solong *info)
 {
@@ -33,7 +33,7 @@ static bool	check_spaces(char *str, t_solong *info)
 	return (true);
 }
 
-void	get_map(int fd, t_solong *info)
+void	bonus_get_map(int fd, t_solong *info)
 {
 	char	*line;
 	char	*next_line;

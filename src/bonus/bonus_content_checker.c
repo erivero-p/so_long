@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   content_checker.c                                  :+:      :+:    :+:   */
+/*   bonus_content_checker.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 09:59:50 by erivero-          #+#    #+#             */
-/*   Updated: 2023/07/26 15:56:58 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/08/01 15:11:55 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/solong.h"
+#include "../../include/solong.h"
 
 static void	content_counter(t_solong *info)
 {
@@ -52,7 +52,7 @@ static bool	characters_checker(t_solong *info)
 		{
 			if (info->map[y][x] != 'C' && info->map[y][x] != 'P'
 				&& info->map[y][x] != 'E' && info->map[y][x] != '0'
-				&& info->map[y][x] != '1')
+				&& info->map[y][x] != '1' && info->map[y][x] != 'X')
 			{
 				ft_printf("Error\nMap contains non valid characters\n");
 				return (false);
@@ -64,7 +64,7 @@ static bool	characters_checker(t_solong *info)
 	return (true);
 }
 
-bool	content_checker(t_solong *info)
+bool	bonus_content_checker(t_solong *info)
 {
 	info->coins = 0;
 	info->p = 0;

@@ -6,11 +6,11 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 12:05:04 by erivero-          #+#    #+#             */
-/*   Updated: 2023/08/01 15:55:40 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/08/01 15:57:01 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/solong.h"
+#include "../../include/solong.h"
 
 int	main(int ac, char **av)
 {
@@ -28,11 +28,11 @@ int	main(int ac, char **av)
 		ft_printf("Error\n Problema al abrir el fichero");
 		return (-1);
 	}
-	get_map(fd, &info);
-	if (!map_checker(&info))
+	bonus_get_map(fd, &info);
+	if (!bonus_map_checker(&info))
 		return (-1);
 	info.movements = 0;
-	create_window(&info);
-	manage_loop(&info);
+	bonus_create_window(&info);
+	bonus_manage_loop(&info);
 	return (0);
 }

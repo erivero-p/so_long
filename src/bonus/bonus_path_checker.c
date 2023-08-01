@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   path_checker.c                                     :+:      :+:    :+:   */
+/*   bonus_path_checker.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 12:25:28 by erivero-          #+#    #+#             */
-/*   Updated: 2023/08/01 13:26:19 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/08/01 12:01:43 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/solong.h"
+#include "../../include/solong.h"
 #include <stdlib.h>
 
-char	**flood_fill(char **map_cpy, int x, int y)
+static char	**flood_fill(char **map_cpy, int x, int y)
 {
 	if (map_cpy[x + 1][y] == '0' || map_cpy[x + 1][y] == 'E'
 		|| map_cpy[x + 1][y] == 'C')
@@ -57,7 +57,7 @@ static char	**map_copy(t_solong *info)
 	return (map_c);
 }
 
-void	free_map(t_solong	*info, char **map)
+void	bonus_free_map(t_solong	*info, char **map)
 {
 	int	i;
 
@@ -92,11 +92,11 @@ static int	path_counter(t_solong *info)
 		}
 		y++;
 	}
-	free_map(info, cpy);
+	bonus_free_map(info, cpy);
 	return (c);
 }
 
-bool	path_checker(t_solong *info)
+bool	bonus_path_checker(t_solong *info)
 {
 	int	count;
 

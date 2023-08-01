@@ -6,7 +6,7 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 11:59:36 by erivero-          #+#    #+#             */
-/*   Updated: 2023/06/21 13:26:15 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/08/01 16:03:24 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,12 @@
 # define RIGHT 124
 # define DOWN 125
 # define UP 126
+# define A 0
+# define D 2
+# define S 1
+# define W 13
 # define ESC 53
+
 # include "../libft/libft.h"
 # include "../mlx/mlx.h"
 # include <stdbool.h>
@@ -35,9 +40,12 @@ typedef struct s_solong
 	void	*floor_ptr;
 	void	*coffee_ptr;
 	void	*exit_ptr;
-	int		x; // coordenadas posición jugador
+	void	*enemy_ptr;
+	void	*movements_ptr;
+	void	*enemy2_ptr;
+	int		x;
 	int		y;
-	int		movements; // tengo que decir que es 0 en el main
+	int		movements;
 	int		coins;
 	int		p;
 	int		e;
@@ -57,7 +65,19 @@ bool	content_checker(t_solong *info);
 bool	path_checker(t_solong *info);
 void	free_map(t_solong	*info, char **map);
 
-
-
+void	bonus_create_window(t_solong *info);
+void	bonus_create_image(t_solong *info);
+void	bonus_put_images(t_solong *info);
+bool	bonus_content_checker(t_solong *info);
+bool	bonus_map_checker(t_solong *info);
+void	bonus_go_left(t_solong *info);
+void	bonus_go_right(t_solong *info);
+void	bonus_go_down(t_solong *info);
+void	bonus_go_up(t_solong *info);
+void	bonus_manage_loop(t_solong *info);
+void	bonus_get_map(int fd, t_solong *info);
+bool	bonus_path_checker(t_solong *info);
+void	bonus_free_map(t_solong	*info, char **map);
+int		bonus_close(t_solong *info);
 
 #endif

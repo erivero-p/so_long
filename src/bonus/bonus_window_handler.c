@@ -6,7 +6,7 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 13:46:29 by erivero-          #+#    #+#             */
-/*   Updated: 2023/08/01 16:03:06 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/08/01 17:06:35 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,25 @@ static void	image_handler(t_solong *info, void *img_ptr, int x, int y)
 
 static void	put_enemies(t_solong *info, int x, int y)
 {
-	image_handler(info, info->movements_ptr, 0, 0);
-	if (info->movements % 2 == 0)
-		image_handler(info, info->enemy_ptr, x, y);
-	else
-		image_handler(info, info->enemy2_ptr, x, y);
+	if (!(x == 0 && y == 0))
+	{
+		image_handler(info, info->floor_ptr, x, y);
+		if (info->map[y][x] == '1')
+			image_handler(info, info->wall_ptr, x, y);
+		else if (info->map[y][x] == 'P')
+			image_handler(info, info->eli_ptr, x, y);
+		else if (info->map[y][x] == 'C')
+			image_handler(info, info->coffee_ptr, x, y);
+		else if (info->map[y][x] == 'E')
+			image_handler(info, info->exit_ptr, x, y);
+		else if (info->map[y][x] == 'X')
+		{
+			if (info->movements % 2 == 0)
+				image_handler(info, info->enemy_ptr, x, y);
+			else
+				image_handler(info, info->enemy2_ptr, x, y);
+		}
+	}
 }
 
 void	bonus_put_images(t_solong *info)
@@ -56,22 +70,14 @@ void	bonus_put_images(t_solong *info)
 	int	x;
 
 	y = 0;
+	image_handler(info, info->floor_ptr, 0, 0);
+	image_handler(info, info->movements_ptr, 0, 0);
 	while (y < info->height)
 	{
 		x = 0;
 		while (x < info->width)
 		{
-			image_handler(info, info->floor_ptr, x, y);
-			if (info->map[y][x] == '1')
-				image_handler(info, info->wall_ptr, x, y);
-			else if (info->map[y][x] == 'P')
-				image_handler(info, info->eli_ptr, x, y);
-			else if (info->map[y][x] == 'C')
-				image_handler(info, info->coffee_ptr, x, y);
-			else if (info->map[y][x] == 'E')
-				image_handler(info, info->exit_ptr, x, y);
-			else if (info->map[y][x] == 'X')
-				put_enemies(info, x, y);
+			put_enemies(info, x, y);
 			x++;
 		}
 		y++;

@@ -6,7 +6,7 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 15:30:22 by erivero-          #+#    #+#             */
-/*   Updated: 2023/08/01 15:43:11 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/08/01 17:05:57 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static void	ft_move(t_solong *info)
 {
-	bonus_put_images(info);
 	info->movements++;
+	bonus_put_images(info);
 }
 
 void	bonus_go_left(t_solong *info)

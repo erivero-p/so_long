@@ -6,7 +6,7 @@
 /*   By: erivero- <erivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 12:05:04 by erivero-          #+#    #+#             */
-/*   Updated: 2023/08/02 12:17:52 by erivero-         ###   ########.fr       */
+/*   Updated: 2023/08/07 11:10:39 by erivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ int	main(int ac, char **av)
 		return (-1);
 	}
 	bonus_get_map(fd, &info);
-	if (!map_checker(&info))
+	if (!bonus_map_checker(&info))
 	{
-		free_map(&info, info.map);
+		bonus_free_map(&info, info.map);
 		return (-1);
 	}
 	info.movements = 0;
